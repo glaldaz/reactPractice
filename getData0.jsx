@@ -1,7 +1,9 @@
 const App = () => {
   const handler = () => alert('hello world');
+  let a = [1,2,3,4]
+  let list = a.map(item => <MyButton onClick={handler}></MyButton>)
 
-  return <MyButton onClick={handler}></MyButton>
+  return <>{list}</>;
 };
 const MyButton = ({onClick}) => {
   let {Button} = ReactBootstrap;
