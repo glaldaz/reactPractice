@@ -1,13 +1,13 @@
 const App = () => {
-  const handler = (e) => alert(`button: ${e.target.getAttributeNames()}`);
+  const handler = (e) => alert(`button: ${e.target.getAttribute(index)}`);
   let a = [1,2,3,4,5]
-  let list = a.map(item => <MyButton key={item} onClick={handler}></MyButton>)
+  let list = a.map((item, index) => <MyButton index= {index}key={item} onClick={handler}></MyButton>)
 
   return <>{list}</>;
 };
-const MyButton = ({onClick}) => {
+const MyButton = ({onClick, index}) => {
   let {Button} = ReactBootstrap;
-  return <Button onClick={onClick}>Click Me</Button>;
+  return <Button index={index} onClick={onClick}>Click Me</Button>;
 };
 
 //---------------
