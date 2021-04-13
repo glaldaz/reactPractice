@@ -1,5 +1,5 @@
 const App = () => {
-  const handler = () => alert('hello world');
+  const handler = (e) => alert(`button: ${e.target.getAttributeNames()}`);
   let a = [1,2,3,4,5]
   let list = a.map(item => <MyButton key={item} onClick={handler}></MyButton>)
 
